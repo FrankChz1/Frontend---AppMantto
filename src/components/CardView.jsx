@@ -3,7 +3,7 @@
 import reportesIcon from '../assets/reportesicon.png';
 
 export default function CardView({ card }) {
-  const avance = card.AVANCE ?? 0;
+  const avance = card.avance ?? 0;
 
   // Función para asignar color según el porcentaje de avance
   const getColorForAvance = (valor) => {
@@ -15,9 +15,9 @@ export default function CardView({ card }) {
 
   // Trunca el título si supera los 23 caracteres
   const truncatedTitulo =
-    card.TITULO && card.TITULO.length > 23
-      ? card.TITULO.slice(0, 23) + '...'
-      : card.TITULO || 'Sin Titulo';
+    card.descripcion && card.descripcion.length > 41
+      ? card.descripcion.slice(0, 41) + '...'
+      : card.descripcion || 'Sin Titulo';
 
   return (
     <div
@@ -51,23 +51,23 @@ export default function CardView({ card }) {
         {/* Fila 1.2: Autor */}
         <div className="flex items-center w-full mb-1 text-xs">
           <h3 className="font-bold text-gray-600">
-            {card.AUTOR || 'Sin Autor'}
+            {card.orden || 'Sin Orden'}
           </h3>
         </div>
         {/* Fila 1.3: Actividad y aviso */}
         <div className="flex justify-between items-center w-full mb-1">
           <h3 className="italic">
-            {card.ACTIVIDAD || 'null'}
+            {card.equipo|| 'null'}
           </h3>
-          <span className="text-gray-600">Aviso: {card.NECESITA_AVISO}</span>
+          
         </div>
         {/* Fila 2: Área y Disciplina */}
         <div className="flex justify-between items-center w-full text-xs">
           <span className="mr-2">
-            {card.AREA || 'Sin Area'}
+            {card.proceso|| 'Sin Area'}
           </span>
           <span>
-            {card.DISCIPLINA || 'Disciplina'}
+            {card.disciplina || 'Disciplina'}
           </span>
         </div>
         {/* Fila 3: Avance (izquierda) y Fecha/Hora (derecha) */}
@@ -81,7 +81,8 @@ export default function CardView({ card }) {
           </p>
           {/* Fecha y hora */}
           <p className="text-gray-600 whitespace-nowrap">
-            {card.FECHA || '4 febrero 2025'} {card.HORA || '18:44'}
+
+            {card.duracion || 'duracion'} h
           </p>
         </div>
       </div>

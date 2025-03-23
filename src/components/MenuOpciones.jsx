@@ -11,7 +11,8 @@ import {
   AlignLeftIcon,
   LogOutIcon,
   Settings2Icon,
-  ChevronsLeftRightIcon, // Importamos el ícono de cerrar
+  ChevronsLeftRightIcon,
+  InfoIcon, // Importamos el ícono de cerrar
 } from 'lucide-react';
 
 export default function MenuOpciones({ onSelect }) {
@@ -71,10 +72,10 @@ export default function MenuOpciones({ onSelect }) {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-1">
           <button
-            onClick={() => onSelect('formulario')}
+            onClick={() => onSelect('galeria')}
             className="flex items-center justify-start px-4 py-3 font-medium text-gray-700 bg-indigo-100 rounded-md hover:bg-indigo-200 transition duration-200"
           >
-            <FileEditIcon className="mr-3" /> Ingresar Reporte
+            <FileEditIcon className="mr-3" /> Reporte de Actividades
           </button>
 
           <button
@@ -95,10 +96,10 @@ export default function MenuOpciones({ onSelect }) {
           </button>
 
           <button
-            onClick={() => onSelect('forzamientosReportes')}
+            onClick={() => onSelect('informacion_data')}
             className="flex items-center justify-start px-4 py-3 font-medium text-gray-700 bg-indigo-100 rounded-md hover:bg-indigo-200 transition duration-200"
           >
-            <AlertTriangleIcon className="mr-3" /> Forzamientos Reportes
+            <InfoIcon className="mr-3" /> Instrucciones e Información
           </button>
 
           <button
@@ -112,7 +113,7 @@ export default function MenuOpciones({ onSelect }) {
             onClick={() => onSelect('salir')}
             className="flex items-center justify-start px-4 py-3 font-medium text-gray-700 bg-indigo-100 rounded-md hover:bg-red-200 transition duration-200"
           >
-            <LogOutIcon className="mr-3" /> Salir
+            <LogOutIcon className="mr-3" /> Cerrar Sesión
           </button>
         </div>
       </div>

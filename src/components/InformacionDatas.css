@@ -1,0 +1,8 @@
+/* src/components/InformacionDatas.css */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@469&display=swap');
+
+.fira-code-font {
+  font-family: "Fira Code", monospace;
+  font-weight: 469;
+  font-style: normal;
+}

@@ -5,6 +5,7 @@ import MenuOpciones from './MenuOpciones';
 import IngresarReporte from './IngresarReporte';
 import Galeria from './Galeria';
 import HistorialForzamiento from './HistorialForza';
+import InformacionDatas from './Informacion';
 
 export default function Perfil() {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export default function Perfil() {
           
           {/* Rutas internas */}
           <Route path="formulario" element={<IngresarReporte />} />
-          <Route path="forzamientosReportes" element={<HistorialForzamiento />} />
+          <Route path="informacion_data" element={<InformacionDatas />} />
           <Route path="galeria" element={<Galeria />} />
           
           {/* Ruta para hacer logout */}

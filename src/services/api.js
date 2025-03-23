@@ -35,15 +35,12 @@ export const login = async (dni, password) => {
 // ---------------------
 
 // URL relativa para los reportes
-const REPORTS_URL = '/api/reports';
+const REPORTS_URL = '/api/ordenes_parada';
 
-// Función para obtener los reportes con soporte para paginación
-export const fetchReports = async (pageSize = 10, lastDocId = null) => {
+// Función para obtener los reportes sin paginación
+export const fetchReports = async () => {
   try {
-    const params = { page_size: pageSize };
-    if (lastDocId) params.last_doc_id = lastDocId;
-
-    const response = await axiosInstance.get(REPORTS_URL, { params });
+    const response = await axiosInstance.get(REPORTS_URL);
     return response.data;
   } catch (error) {
     console.error('Error al obtener los reportes:', error);
@@ -51,16 +48,7 @@ export const fetchReports = async (pageSize = 10, lastDocId = null) => {
   }
 };
 
-// Función para obtener un reporte específico por ID
-export const fetchReportById = async (id) => {
-  try {
-    const response = await axiosInstance.get(`${REPORTS_URL}/${id}`);
-    return response.data;
-  } catch (error) {
-    console.error('Error al obtener el reporte por ID:', error);
-    throw error;
-  }
-};
+
 
 // Función para descargar el reporte Excel
 export const downloadReportExcel = async () => {
