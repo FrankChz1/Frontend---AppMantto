@@ -11,4 +11,7 @@ export default defineConfig({
       '/api': 'http://localhost:5000', // Redirigir todas las solicitudes /api al backend en el puerto 5000
     },
   },
+  test: {
+    environment: 'jsdom',
+  },
 });
