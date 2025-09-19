@@ -12,7 +12,7 @@ import {
   LogOutIcon,
   Settings2Icon,
   ChevronsLeftRightIcon,
-  InfoIcon, // Importamos el ícono de cerrar
+  InfoIcon, // Ícono para la opción de información
 } from 'lucide-react';
 
 export default function MenuOpciones({ onSelect }) {
@@ -72,7 +72,7 @@ export default function MenuOpciones({ onSelect }) {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-1">
           <button
-            onClick={() => onSelect('galeria')}
+            onClick={() => onSelect('formulario')}
             className="flex items-center justify-start px-4 py-3 font-medium text-gray-700 bg-indigo-100 rounded-md hover:bg-indigo-200 transition duration-200"
           >
             <FileEditIcon className="mr-3" /> Reporte de Actividades

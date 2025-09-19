@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import Perfil from './components/Perfil';
-import NotFounds from './components/NotFounds';
+import NotFound from './components/NotFound';
 import Slider from './components/Slider';
 import Galeria from './components/Galeria';
 import ProtectedRoute from './components/ProtectedRoute'; // Importa ProtectedRoute
@@ -47,7 +47,7 @@ export default function App() {
         />
 
         {/* Página 404 */}
-        <Route path="*" element={<NotFounds />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
